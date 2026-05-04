@@ -13,9 +13,8 @@ async function getBackground() {
   const result = await response.json();
   console.log(result);
 
-  if (result.media_type !== "image") {
-    console.log("APOD returned a non-image media type.");
-    return null;
+  if (result.media_type === "video") {
+  return result.thumbnail_url;
   }
 
   return result.url;
