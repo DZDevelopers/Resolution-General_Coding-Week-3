@@ -13,10 +13,7 @@ async function getBackground() {
     if (result.media_type === "image") {
       return result.url;
     }
-    if (result.media_type === "video" && result.thumbnail_url) {
-      return result.thumbnail_url;
-    }
-    return null;
+    return "https://apod.nasa.gov/apod/image/2501/NGC1232_LRGB_2048.jpg";;
   } catch (error) {
     console.log(error.message);
     return null;
