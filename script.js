@@ -1,4 +1,5 @@
-const background = document.getElementById("background");
+window.onload = function () {
+  const background = document.getElementById("background");
 
 async function getBackground() {
   const url =
